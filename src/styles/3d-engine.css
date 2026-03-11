@@ -29,13 +29,17 @@
     white-space: nowrap;
 }
 
-/* Capa frontal - Rosa neón brillante */
+/* Capa frontal - Amarillo con borde rosa */
 .logo-3d .text-layer.front {
-    color: var(--pink);
+    color: var(--yellow);
     text-shadow: 
         0 0 5px var(--pink),
         0 0 10px var(--pink),
-        0 0 15px var(--yellow);
+        0 0 15px var(--pink),
+        -1px -1px 0 var(--pink),
+        1px -1px 0 var(--pink),
+        -1px 1px 0 var(--pink),
+        1px 1px 0 var(--pink);
     filter: url(#neon-glow);
     z-index: 15;
     transform: translateX(-50%) translateY(-50%);
