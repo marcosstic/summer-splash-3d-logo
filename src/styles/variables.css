@@ -1,0 +1,48 @@
+/* Summer Splash - CSS Variables */
+:root {
+    /* Paleta de colores principal */
+    --pink: #f42ab6;
+    --yellow: #ecde13;
+    --cyan: #5ae7f5;
+    --turquoise: #00afb9;
+    --purple: #9d50bb;
+    
+    /* Colores degradados para extrusión 3D */
+    --layer-1: #f42ab6;
+    --layer-2: #e628ad;
+    --layer-3: #d826a4;
+    --layer-4: #ca249b;
+    --layer-5: #bc2292;
+    --layer-6: #ae2089;
+    --layer-7: #a01e80;
+    --layer-8: #921c77;
+    --layer-9: #841a6e;
+    --layer-10: #761865;
+    --layer-11: #68165c;
+    --layer-12: #5a1453;
+    --layer-13: #4c124a;
+    --layer-14: #3e1041;
+    --layer-15: #9d50bb;
+    
+    /* Tipografía */
+    --font-display: 'Fredoka', cursive;
+    --font-body: 'Poppins', sans-serif;
+    
+    /* Variables 3D dinámicas (controladas por JavaScript) */
+    --rx: 0deg;
+    --ry: 0deg;
+    --rz: 0deg;
+    
+    /* Dimensiones del logo */
+    --logo-scale: 1;
+    --extrusion-depth: 15px;
+    
+    /* Efectos de iluminación */
+    --light-x: -50;
+    --light-y: 30;
+    --light-z: 200;
+    
+    /* Animaciones */
+    --water-animation-duration: 8s;
+    --logo-animation-duration: 0.1s;
+}

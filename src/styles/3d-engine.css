@@ -1,0 +1,164 @@
+/* Summer Splash - 3D Engine CSS */
+.logo-3d {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    position: relative;
+    transform-style: preserve-3d;
+    filter: none;
+    user-select: none;
+    cursor: grab;
+    text-align: center;
+    width: 100%;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.logo-3d:active {
+    cursor: grabbing;
+}
+
+/* Capas de extrusión 3D - Cada span es una capa */
+.logo-3d .text-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transform-style: preserve-3d;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+/* Capa frontal - Rosa neón brillante */
+.logo-3d .text-layer.front {
+    color: var(--pink);
+    text-shadow: 
+        0 0 5px var(--pink),
+        0 0 10px var(--pink),
+        0 0 15px var(--yellow);
+    filter: url(#neon-glow);
+    z-index: 15;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* Capas de extrusión - Mostrando todos los colores de la paleta */
+.logo-3d .text-layer.layer-1 { 
+    color: var(--yellow); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-2px); 
+    z-index: 14;
+}
+.logo-3d .text-layer.layer-2 { 
+    color: var(--cyan); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-4px); 
+    z-index: 13;
+}
+.logo-3d .text-layer.layer-3 { 
+    color: var(--turquoise); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-6px); 
+    z-index: 12;
+}
+.logo-3d .text-layer.layer-4 { 
+    color: var(--layer-1); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-8px); 
+    z-index: 11;
+}
+.logo-3d .text-layer.layer-5 { 
+    color: var(--layer-3); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-10px); 
+    z-index: 10;
+}
+.logo-3d .text-layer.layer-6 { 
+    color: var(--layer-5); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-12px); 
+    z-index: 9;
+}
+.logo-3d .text-layer.layer-7 { 
+    color: var(--layer-7); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-14px); 
+    z-index: 8;
+}
+.logo-3d .text-layer.layer-8 { 
+    color: var(--layer-9); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-16px); 
+    z-index: 7;
+}
+.logo-3d .text-layer.layer-9 { 
+    color: var(--layer-11); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-18px); 
+    z-index: 6;
+}
+.logo-3d .text-layer.layer-10 { 
+    color: var(--layer-13); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-20px); 
+    z-index: 5;
+}
+.logo-3d .text-layer.layer-11 { 
+    color: var(--purple); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-22px); 
+    z-index: 4;
+}
+.logo-3d .text-layer.layer-12 { 
+    color: var(--layer-10); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-24px); 
+    z-index: 3;
+}
+.logo-3d .text-layer.layer-13 { 
+    color: var(--layer-8); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-26px); 
+    z-index: 2;
+}
+.logo-3d .text-layer.layer-14 { 
+    color: var(--layer-6); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-28px); 
+    z-index: 1;
+}
+.logo-3d .text-layer.back { 
+    color: var(--layer-4); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-30px); 
+    z-index: 0;
+}
+
+/* Efectos de iluminación dinámica */
+.logo-3d-container {
+    transform-style: preserve-3d;
+    transform: rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz));
+    transition: transform 0.1s ease-out;
+}
+
+/* Sombra 3D proyectada */
+.logo-3d-container::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%) rotateX(90deg);
+    width: 100%;
+    height: 20px;
+    background: radial-gradient(ellipse at center, 
+        rgba(157, 80, 187, 0.4) 0%, 
+        transparent 70%);
+    filter: blur(10px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-3d {
+        font-size: clamp(3rem, 8vw, 6rem);
+    }
+    
+    .logo-3d .text-layer.layer-1 { transform: translateZ(-0.5px); }
+    .logo-3d .text-layer.layer-2 { transform: translateZ(-1px); }
+    .logo-3d .text-layer.layer-3 { transform: translateZ(-1.5px); }
+    .logo-3d .text-layer.layer-4 { transform: translateZ(-2px); }
+    .logo-3d .text-layer.layer-5 { transform: translateZ(-2.5px); }
+    .logo-3d .text-layer.layer-6 { transform: translateZ(-3px); }
+    .logo-3d .text-layer.layer-7 { transform: translateZ(-3.5px); }
+    .logo-3d .text-layer.layer-8 { transform: translateZ(-4px); }
+    .logo-3d .text-layer.layer-9 { transform: translateZ(-4.5px); }
+    .logo-3d .text-layer.layer-10 { transform: translateZ(-5px); }
+    .logo-3d .text-layer.layer-11 { transform: translateZ(-5.5px); }
+    .logo-3d .text-layer.layer-12 { transform: translateZ(-6px); }
+    .logo-3d .text-layer.layer-13 { transform: translateZ(-6.5px); }
+    .logo-3d .text-layer.layer-14 { transform: translateZ(-7px); }
+    .logo-3d .text-layer.back { transform: translateZ(-7.5px); }
+}

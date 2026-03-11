@@ -1,0 +1,22 @@
+{
+  "name": "summer-splash-3d",
+  "version": "1.0.0",
+  "description": "Summer Splash 3D Logo - CSS 3D Engine with Vanilla JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "build": "echo 'No build step needed - static files ready'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "3d",
+    "css3",
+    "vanilla-javascript",
+    "logo-animation",
+    "webgl-alternative"
+  ],
+  "author": "Summer Splash Team",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

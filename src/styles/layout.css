@@ -1,0 +1,107 @@
+/* Summer Splash - Layout System */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--turquoise), var(--purple));
+}
+
+.scene-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.water-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        var(--turquoise) 0%,
+        var(--cyan) 25%,
+        var(--purple) 50%,
+        var(--turquoise) 75%,
+        var(--cyan) 100%
+    );
+    background-size: 400% 400%;
+    animation: waterFlow var(--water-animation-duration) ease infinite;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+@keyframes waterFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.logo-3d-container {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz));
+    transition: transform var(--logo-animation-duration) ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 90vw;
+}
+
+.ui-overlay {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 5;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.event-title {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    animation: none;
+    opacity: 0.8;
+}
+
+.tagline {
+    font-family: var(--font-body);
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 300;
+    opacity: 0.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}

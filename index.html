@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Splash - 3D Logo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/variables.css">
+    <link rel="stylesheet" href="src/styles/layout.css">
+    <link rel="stylesheet" href="src/styles/3d-engine.css">
+</head>
+<body>
+    <!-- Filtros SVG para efecto de brillo plástico -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <defs>
+            <filter id="plastic-gloss">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+                <feSpecularLighting result="specOut" specularExponent="20" lighting-color="white">
+                    <fePointLight x="-50" y="30" z="200"/>
+                </feSpecularLighting>
+                <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut2"/>
+                <feComposite in="SourceGraphic" in2="specOut2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+            </filter>
+            
+            <filter id="neon-glow">
+                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Contenedor principal con perspectiva 3D -->
+    <div class="scene-container">
+        <!-- Fondo animado de agua -->
+        <div class="water-background"></div>
+        
+        <!-- Contenedor del logo 3D -->
+        <div class="logo-3d-container" id="logoContainer">
+            <div class="logo-3d" id="logo3d">
+                <!-- Las capas de texto se generarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Módulos JavaScript -->
+    <script type="module" src="src/js/App.js"></script>
+    <script type="module" src="src/js/MouseTracker.js"></script>
+    <script type="module" src="src/js/Parallax.js"></script>
+</body>
+</html>
