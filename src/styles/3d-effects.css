@@ -1,0 +1,187 @@
+/* 3D Effects Demo - Todos los efectos sin romper el actual */
+
+/* Effect #1: Extrusión 3D Mejorada */
+.logo-3d.effect-extrusion .text-layer.front {
+    color: var(--yellow);
+    text-shadow: 
+        /* Borde rosa definido */
+        -2px -2px 0 var(--pink),
+        2px -2px 0 var(--pink),
+        -2px 2px 0 var(--pink),
+        2px 2px 0 var(--pink),
+        /* Glow rosa */
+        0 0 10px var(--pink),
+        0 0 20px var(--pink),
+        0 0 30px var(--pink);
+    filter: url(#neon-glow);
+}
+
+.logo-3d.effect-extrusion .text-layer.layer-1 { 
+    color: var(--yellow); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-3px); 
+    text-shadow: -1px -1px 0 var(--pink), 1px -1px 0 var(--pink), -1px 1px 0 var(--pink), 1px 1px 0 var(--pink);
+}
+.logo-3d.effect-extrusion .text-layer.layer-2 { 
+    color: var(--cyan); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-6px); 
+    text-shadow: -1px -1px 0 var(--pink), 1px -1px 0 var(--pink), -1px 1px 0 var(--pink), 1px 1px 0 var(--pink);
+}
+.logo-3d.effect-extrusion .text-layer.layer-3 { 
+    color: var(--turquoise); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-9px); 
+    text-shadow: -1px -1px 0 var(--purple), 1px -1px 0 var(--purple), -1px 1px 0 var(--purple), 1px 1px 0 var(--purple);
+}
+
+/* Effect #2: Bloque Sólido con Sombras Profundas */
+.logo-3d.effect-solid .text-layer.front {
+    color: var(--yellow);
+    text-shadow: 
+        /* Borde grueso rosa */
+        -3px -3px 0 var(--pink),
+        3px -3px 0 var(--pink),
+        -3px 3px 0 var(--pink),
+        3px 3px 0 var(--pink),
+        /* Sombra profunda */
+        6px 6px 8px rgba(157, 80, 187, 0.8),
+        8px 8px 12px rgba(157, 80, 187, 0.4);
+    filter: none;
+}
+
+.logo-3d.effect-solid .text-layer.layer-1 { 
+    color: var(--layer-1); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-4px); 
+}
+.logo-3d.effect-solid .text-layer.layer-2 { 
+    color: var(--layer-3); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-8px); 
+}
+.logo-3d.effect-solid .text-layer.layer-3 { 
+    color: var(--layer-5); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-12px); 
+}
+
+/* Effect #3: Neón 3D con Glow Multicapa */
+.logo-3d.effect-neon .text-layer.front {
+    color: var(--yellow);
+    text-shadow: 
+        /* Capas de glow rosa */
+        0 0 5px var(--pink),
+        0 0 10px var(--pink),
+        0 0 15px var(--pink),
+        0 0 20px var(--pink),
+        0 0 30px var(--pink),
+        /* Borde rosa */
+        -1px -1px 0 var(--pink),
+        1px -1px 0 var(--pink),
+        -1px 1px 0 var(--pink),
+        1px 1px 0 var(--pink);
+    filter: url(#neon-glow);
+    animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+    0%, 100% { 
+        text-shadow: 
+            0 0 5px var(--pink),
+            0 0 10px var(--pink),
+            0 0 15px var(--pink),
+            0 0 20px var(--pink),
+            0 0 30px var(--pink),
+            -1px -1px 0 var(--pink),
+            1px -1px 0 var(--pink),
+            -1px 1px 0 var(--pink),
+            1px 1px 0 var(--pink);
+    }
+    50% { 
+        text-shadow: 
+            0 0 10px var(--pink),
+            0 0 20px var(--pink),
+            0 0 30px var(--pink),
+            0 0 40px var(--pink),
+            0 0 50px var(--pink),
+            -1px -1px 0 var(--pink),
+            1px -1px 0 var(--pink),
+            -1px 1px 0 var(--pink),
+            1px 1px 0 var(--pink);
+    }
+}
+
+/* Effect #4: Metalizado con Reflexión */
+.logo-3d.effect-metallic .text-layer.front {
+    background: linear-gradient(135deg, var(--yellow) 0%, #fff 50%, var(--yellow) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+        -1px -1px 0 var(--pink),
+        1px -1px 0 var(--pink),
+        -1px 1px 0 var(--pink),
+        1px 1px 0 var(--pink),
+        0 0 20px rgba(255, 255, 255, 0.5);
+    filter: contrast(1.2) brightness(1.1);
+}
+
+.logo-3d.effect-metallic .text-layer.layer-1 { 
+    background: linear-gradient(135deg, var(--cyan) 0%, var(--yellow) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateX(-50%) translateY(-50%) translateZ(-3px); 
+}
+
+/* Effect #5: Inflable con Bordes Redondeados */
+.logo-3d.effect-inflatable .text-layer.front {
+    color: var(--yellow);
+    text-shadow: 
+        /* Borde suave rosa */
+        -2px -2px 0 var(--pink),
+        2px -2px 0 var(--pink),
+        -2px 2px 0 var(--pink),
+        2px 2px 0 var(--pink),
+        /* Sombra inflable */
+        0 4px 8px rgba(244, 42, 182, 0.3),
+        0 8px 16px rgba(244, 42, 182, 0.2);
+    filter: url(#plastic-gloss);
+    transform: translateX(-50%) translateY(-50%) scale(1.05);
+}
+
+.logo-3d.effect-inflatable .text-layer.layer-1 { 
+    color: var(--layer-2); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-2px) scale(1.03); 
+}
+.logo-3d.effect-inflatable .text-layer.layer-2 { 
+    color: var(--layer-4); 
+    transform: translateX(-50%) translateY(-50%) translateZ(-4px) scale(1.02); 
+}
+
+/* Transiciones suaves entre efectos */
+.logo-3d {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-3d .text-layer {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive adjustments para efectos */
+@media (max-width: 768px) {
+    .logo-3d.effect-solid .text-layer.front {
+        text-shadow: 
+            -2px -2px 0 var(--pink),
+            2px -2px 0 var(--pink),
+            -2px 2px 0 var(--pink),
+            2px 2px 0 var(--pink),
+            4px 4px 6px rgba(157, 80, 187, 0.6);
+    }
+    
+    .logo-3d.effect-neon .text-layer.front {
+        text-shadow: 
+            0 0 3px var(--pink),
+            0 0 6px var(--pink),
+            0 0 9px var(--pink),
+            -1px -1px 0 var(--pink),
+            1px -1px 0 var(--pink),
+            -1px 1px 0 var(--pink),
+            1px 1px 0 var(--pink);
+    }
+}

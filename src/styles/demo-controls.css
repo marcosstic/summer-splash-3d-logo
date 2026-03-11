@@ -1,0 +1,120 @@
+/* Demo Controls - Panel de Efectos 3D */
+.demo-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    z-index: 1000;
+    min-width: 280px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.demo-controls h3 {
+    color: var(--yellow);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.effect-button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    background: linear-gradient(135deg, var(--purple), var(--pink));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.effect-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(244, 42, 182, 0.4);
+}
+
+.effect-button.active {
+    background: linear-gradient(135deg, var(--yellow), var(--cyan));
+    color: var(--purple);
+    font-weight: 700;
+}
+
+.effect-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.effect-button:hover::before {
+    left: 100%;
+}
+
+.demo-info {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    font-family: var(--font-body);
+    line-height: 1.4;
+}
+
+.demo-controls-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(244, 42, 182, 0.3);
+}
+
+.demo-controls-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(244, 42, 182, 0.5);
+}
+
+.demo-controls.hidden {
+    transform: translateX(350px);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .demo-controls {
+        top: 10px;
+        right: 10px;
+        min-width: 240px;
+        padding: 15px;
+    }
+    
+    .demo-controls-toggle {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+}
