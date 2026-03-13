@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "summer-splash-3d-logo",
+  "outputDirectory": ".",
   "routes": [
     {
       "src": "/(.*)",
