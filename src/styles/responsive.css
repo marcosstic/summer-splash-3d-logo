@@ -1,0 +1,324 @@
+/* Summer Splash - Responsive Design for iPhone XS, iPad, and Android */
+
+/* ===== iPhone XS (375x812) ===== */
+@media only screen 
+and (device-width: 375px) 
+and (device-height: 812px) 
+and (-webkit-device-pixel-ratio: 3) {
+    
+    .logo-3d {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        max-width: 85vw;
+    }
+    
+    .logo-3d-container {
+        max-width: 85vw;
+        perspective: 800px;
+    }
+    
+    .scene-container {
+        perspective: 800px;
+    }
+    
+    /* Reducir profundidad 3D para móviles */
+    .logo-3d .text-layer.layer-1 { transform: translateX(-50%) translateY(-50%) translateZ(-1px); }
+    .logo-3d .text-layer.layer-2 { transform: translateX(-50%) translateY(-50%) translateZ(-2px); }
+    .logo-3d .text-layer.layer-3 { transform: translateX(-50%) translateY(-50%) translateZ(-3px); }
+    .logo-3d .text-layer.layer-4 { transform: translateX(-50%) translateY(-50%) translateZ(-4px); }
+    .logo-3d .text-layer.layer-5 { transform: translateX(-50%) translateY(-50%) translateZ(-5px); }
+    .logo-3d .text-layer.layer-6 { transform: translateX(-50%) translateY(-50%) translateZ(-6px); }
+    .logo-3d .text-layer.layer-7 { transform: translateX(-50%) translateY(-50%) translateZ(-7px); }
+    .logo-3d .text-layer.layer-8 { transform: translateX(-50%) translateY(-50%) translateZ(-8px); }
+    .logo-3d .text-layer.layer-9 { transform: translateX(-50%) translateY(-50%) translateZ(-9px); }
+    .logo-3d .text-layer.layer-10 { transform: translateX(-50%) translateY(-50%) translateZ(-10px); }
+    .logo-3d .text-layer.layer-11 { transform: translateX(-50%) translateY(-50%) translateZ(-11px); }
+    .logo-3d .text-layer.layer-12 { transform: translateX(-50%) translateY(-50%) translateZ(-12px); }
+    .logo-3d .text-layer.layer-13 { transform: translateX(-50%) translateY(-50%) translateZ(-13px); }
+    .logo-3d .text-layer.layer-14 { transform: translateX(-50%) translateY(-50%) translateZ(-14px); }
+    .logo-3d .text-layer.back { transform: translateX(-50%) translateY(-50%) translateZ(-15px); }
+}
+
+/* ===== iPhone XR/11 (414x896) ===== */
+@media only screen 
+and (device-width: 414px) 
+and (device-height: 896px) 
+and (-webkit-device-pixel-ratio: 3) {
+    
+    .logo-3d {
+        font-size: clamp(2rem, 5.5vw, 3rem);
+        max-width: 88vw;
+    }
+    
+    .logo-3d-container {
+        max-width: 88vw;
+    }
+}
+
+/* ===== iPhone SE (375x667) ===== */
+@media only screen 
+and (device-width: 375px) 
+and (device-height: 667px) 
+and (-webkit-device-pixel-ratio: 2) {
+    
+    .logo-3d {
+        font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+        max-width: 82vw;
+    }
+    
+    .logo-3d-container {
+        max-width: 82vw;
+    }
+}
+
+/* ===== iPad (768x1024) ===== */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    
+    .logo-3d {
+        font-size: clamp(3rem, 6vw, 4.5rem);
+        max-width: 75vw;
+    }
+    
+    .logo-3d-container {
+        max-width: 75vw;
+        perspective: 1200px;
+    }
+    
+    .scene-container {
+        perspective: 1200px;
+    }
+    
+    /* Restaurar profundidad 3D para tablets */
+    .logo-3d .text-layer.layer-1 { transform: translateX(-50%) translateY(-50%) translateZ(-2px); }
+    .logo-3d .text-layer.layer-2 { transform: translateX(-50%) translateY(-50%) translateZ(-4px); }
+    .logo-3d .text-layer.layer-3 { transform: translateX(-50%) translateY(-50%) translateZ(-6px); }
+    .logo-3d .text-layer.layer-4 { transform: translateX(-50%) translateY(-50%) translateZ(-8px); }
+    .logo-3d .text-layer.layer-5 { transform: translateX(-50%) translateY(-50%) translateZ(-10px); }
+    .logo-3d .text-layer.layer-6 { transform: translateX(-50%) translateY(-50%) translateZ(-12px); }
+    .logo-3d .text-layer.layer-7 { transform: translateX(-50%) translateY(-50%) translateZ(-14px); }
+    .logo-3d .text-layer.layer-8 { transform: translateX(-50%) translateY(-50%) translateZ(-16px); }
+    .logo-3d .text-layer.layer-9 { transform: translateX(-50%) translateY(-50%) translateZ(-18px); }
+    .logo-3d .text-layer.layer-10 { transform: translateX(-50%) translateY(-50%) translateZ(-20px); }
+    .logo-3d .text-layer.layer-11 { transform: translateX(-50%) translateY(-50%) translateZ(-22px); }
+    .logo-3d .text-layer.layer-12 { transform: translateX(-50%) translateY(-50%) translateZ(-24px); }
+    .logo-3d .text-layer.layer-13 { transform: translateX(-50%) translateY(-50%) translateZ(-26px); }
+    .logo-3d .text-layer.layer-14 { transform: translateX(-50%) translateY(-50%) translateZ(-28px); }
+    .logo-3d .text-layer.back { transform: translateX(-50%) translateY(-50%) translateZ(-30px); }
+}
+
+/* ===== iPad Pro (1024x1366) ===== */
+@media only screen 
+and (min-device-width: 1024px) 
+and (max-device-width: 1366px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+    
+    .logo-3d {
+        font-size: clamp(3.5rem, 7vw, 5.5rem);
+        max-width: 70vw;
+    }
+    
+    .logo-3d-container {
+        max-width: 70vw;
+        perspective: 1500px;
+    }
+    
+    .scene-container {
+        perspective: 1500px;
+    }
+}
+
+/* ===== Android Mobile (General) ===== */
+@media screen 
+and (max-width: 480px) 
+and (orientation: portrait) {
+    
+    .logo-3d {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        max-width: 85vw;
+        letter-spacing: 0.02em;
+    }
+    
+    .logo-3d-container {
+        max-width: 85vw;
+        perspective: 800px;
+    }
+    
+    .scene-container {
+        perspective: 800px;
+    }
+    
+    /* Optimizar para pantallas táctiles */
+    .logo-3d {
+        cursor: pointer;
+    }
+    
+    /* Reducir efectos 3D para rendimiento */
+    .logo-3d .text-layer {
+        will-change: transform;
+    }
+    
+    /* Ajustar controles demo */
+    .demo-controls {
+        top: 10px;
+        right: 10px;
+        min-width: 200px;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .demo-controls-toggle {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== Android Landscape ===== */
+@media screen 
+and (max-height: 500px) 
+and (orientation: landscape) {
+    
+    .logo-3d {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        max-width: 80vw;
+    }
+    
+    .logo-3d-container {
+        max-width: 80vw;
+        transform: scale(0.8);
+    }
+    
+    .scene-container {
+        perspective: 1000px;
+    }
+    
+    /* Ocultar controles en landscape para más espacio */
+    .demo-controls {
+        display: none;
+    }
+    
+    .demo-controls-toggle {
+        display: none;
+    }
+}
+
+/* ===== Android Tablets (600px+) ===== */
+@media screen 
+and (min-width: 600px) 
+and (max-width: 960px) 
+and (orientation: portrait) {
+    
+    .logo-3d {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        max-width: 80vw;
+    }
+    
+    .logo-3d-container {
+        max-width: 80vw;
+        perspective: 1100px;
+    }
+    
+    .scene-container {
+        perspective: 1100px;
+    }
+}
+
+/* ===== Optimización General para Móviles ===== */
+@media screen 
+and (max-width: 768px) {
+    
+    /* Reducir animaciones para rendimiento */
+    .water-background {
+        animation-duration: 12s;
+    }
+    
+    /* Optimizar efectos 3D */
+    .logo-3d .text-layer.front {
+        text-shadow: 
+            0 0 3px var(--pink),
+            0 0 6px var(--pink),
+            0 0 9px var(--pink),
+            -1px -1px 0 var(--pink),
+            1px -1px 0 var(--pink),
+            -1px 1px 0 var(--pink),
+            1px 1px 0 var(--pink);
+    }
+    
+    /* Mejorar rendimiento */
+    .logo-3d,
+    .logo-3d .text-layer {
+        will-change: transform;
+        backface-visibility: hidden;
+    }
+    
+    /* Ajustar perspectiva para móviles */
+    .scene-container {
+        perspective: 800px;
+    }
+    
+    .logo-3d-container {
+        perspective: 800px;
+    }
+}
+
+/* ===== Optimización para Safari iOS ===== */
+@supports (-webkit-touch-callout: none) {
+    
+    /* Safari iOS específico */
+    .logo-3d {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    .logo-3d .text-layer {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    /* Prevenir zoom en Safari */
+    body {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+}
+
+/* ===== Optimización para Chrome Mobile ===== */
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+    
+    .logo-3d {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* ===== Pantallas pequeñas (Menos de 320px) ===== */
+@media screen 
+and (max-width: 320px) {
+    
+    .logo-3d {
+        font-size: clamp(1.4rem, 4vw, 1.8rem);
+        max-width: 90vw;
+        letter-spacing: 0.01em;
+    }
+    
+    .logo-3d-container {
+        max-width: 90vw;
+    }
+    
+    /* Controles más pequeños */
+    .demo-controls {
+        min-width: 180px;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    
+    .demo-controls-toggle {
+        width: 25px;
+        height: 25px;
+        font-size: 0.7rem;
+    }
+}
