@@ -1,41 +1,111 @@
-/* Summer Splash - Responsive Design for iPhone XS, iPad, and Android */
-
-/* ===== iPhone XS (375x812) ===== */
-@media only screen 
-and (device-width: 375px) 
-and (device-height: 812px) 
-and (-webkit-device-pixel-ratio: 3) {
+/* ===== General Mobile Fix (Prioridad alta) ===== */
+@media screen 
+and (max-width: 414px) {
     
     .logo-3d {
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
-        max-width: 85vw;
+        font-size: clamp(1.2rem, 4vw, 1.6rem) !important;
+        max-width: 95vw !important;
+        letter-spacing: 0.01em !important;
+        line-height: 1.1 !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
     }
     
     .logo-3d-container {
-        max-width: 85vw;
-        perspective: 800px;
+        max-width: 95vw !important;
+        perspective: 500px !important;
     }
     
     .scene-container {
-        perspective: 800px;
+        perspective: 500px !important;
     }
     
-    /* Reducir profundidad 3D para móviles */
-    .logo-3d .text-layer.layer-1 { transform: translateX(-50%) translateY(-50%) translateZ(-1px); }
-    .logo-3d .text-layer.layer-2 { transform: translateX(-50%) translateY(-50%) translateZ(-2px); }
-    .logo-3d .text-layer.layer-3 { transform: translateX(-50%) translateY(-50%) translateZ(-3px); }
-    .logo-3d .text-layer.layer-4 { transform: translateX(-50%) translateY(-50%) translateZ(-4px); }
-    .logo-3d .text-layer.layer-5 { transform: translateX(-50%) translateY(-50%) translateZ(-5px); }
-    .logo-3d .text-layer.layer-6 { transform: translateX(-50%) translateY(-50%) translateZ(-6px); }
-    .logo-3d .text-layer.layer-7 { transform: translateX(-50%) translateY(-50%) translateZ(-7px); }
-    .logo-3d .text-layer.layer-8 { transform: translateX(-50%) translateY(-50%) translateZ(-8px); }
-    .logo-3d .text-layer.layer-9 { transform: translateX(-50%) translateY(-50%) translateZ(-9px); }
-    .logo-3d .text-layer.layer-10 { transform: translateX(-50%) translateY(-50%) translateZ(-10px); }
-    .logo-3d .text-layer.layer-11 { transform: translateX(-50%) translateY(-50%) translateZ(-11px); }
-    .logo-3d .text-layer.layer-12 { transform: translateX(-50%) translateY(-50%) translateZ(-12px); }
-    .logo-3d .text-layer.layer-13 { transform: translateX(-50%) translateY(-50%) translateZ(-13px); }
-    .logo-3d .text-layer.layer-14 { transform: translateX(-50%) translateY(-50%) translateZ(-14px); }
-    .logo-3d .text-layer.back { transform: translateX(-50%) translateY(-50%) translateZ(-15px); }
+    /* Reducir profundidad 3D al mínimo */
+    .logo-3d .text-layer.layer-1 { transform: translateX(-50%) translateY(-50%) translateZ(-0.3px) !important; }
+    .logo-3d .text-layer.layer-2 { transform: translateX(-50%) translateY(-50%) translateZ(-0.6px) !important; }
+    .logo-3d .text-layer.layer-3 { transform: translateX(-50%) translateY(-50%) translateZ(-0.9px) !important; }
+    .logo-3d .text-layer.layer-4 { transform: translateX(-50%) translateY(-50%) translateZ(-1.2px) !important; }
+    .logo-3d .text-layer.layer-5 { transform: translateX(-50%) translateY(-50%) translateZ(-1.5px) !important; }
+    .logo-3d .text-layer.layer-6 { transform: translateX(-50%) translateY(-50%) translateZ(-1.8px) !important; }
+    .logo-3d .text-layer.layer-7 { transform: translateX(-50%) translateY(-50%) translateZ(-2.1px) !important; }
+    .logo-3d .text-layer.layer-8 { transform: translateX(-50%) translateY(-50%) translateZ(-2.4px) !important; }
+    .logo-3d .text-layer.layer-9 { transform: translateX(-50%) translateY(-50%) translateZ(-2.7px) !important; }
+    .logo-3d .text-layer.layer-10 { transform: translateX(-50%) translateY(-50%) translateZ(-3px) !important; }
+    .logo-3d .text-layer.layer-11 { transform: translateX(-50%) translateY(-50%) translateZ(-3.3px) !important; }
+    .logo-3d .text-layer.layer-12 { transform: translateX(-50%) translateY(-50%) translateZ(-3.6px) !important; }
+    .logo-3d .text-layer.layer-13 { transform: translateX(-50%) translateY(-50%) translateZ(-3.9px) !important; }
+    .logo-3d .text-layer.layer-14 { transform: translateX(-50%) translateY(-50%) translateZ(-4.2px) !important; }
+    .logo-3d .text-layer.back { transform: translateX(-50%) translateY(-50%) translateZ(-4.5px) !important; }
+    
+    /* Simplificar efectos de texto */
+    .logo-3d .text-layer.front {
+        text-shadow: 
+            0 0 1px var(--pink),
+            -1px -1px 0 var(--pink),
+            1px -1px 0 var(--pink),
+            -1px 1px 0 var(--pink),
+            1px 1px 0 var(--pink) !important;
+    }
+    
+    /* Forzar texto a no desbordar */
+    .logo-3d .text-layer {
+        white-space: normal !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+    }
+}
+
+/* Summer Splash - Responsive Design for iPhone XS, iPad, and Android */
+
+/* ===== iPhone XS y similares (375px width) ===== */
+@media screen 
+and (max-width: 375px) 
+and (max-height: 812px) {
+    
+    .logo-3d {
+        font-size: clamp(1.4rem, 4.5vw, 1.8rem);
+        max-width: 90vw;
+        letter-spacing: 0.01em;
+        line-height: 1.1;
+    }
+    
+    .logo-3d-container {
+        max-width: 90vw;
+        perspective: 600px;
+    }
+    
+    .scene-container {
+        perspective: 600px;
+    }
+    
+    /* Reducir drásticamente la profundidad 3D */
+    .logo-3d .text-layer.layer-1 { transform: translateX(-50%) translateY(-50%) translateZ(-0.5px); }
+    .logo-3d .text-layer.layer-2 { transform: translateX(-50%) translateY(-50%) translateZ(-1px); }
+    .logo-3d .text-layer.layer-3 { transform: translateX(-50%) translateY(-50%) translateZ(-1.5px); }
+    .logo-3d .text-layer.layer-4 { transform: translateX(-50%) translateY(-50%) translateZ(-2px); }
+    .logo-3d .text-layer.layer-5 { transform: translateX(-50%) translateY(-50%) translateZ(-2.5px); }
+    .logo-3d .text-layer.layer-6 { transform: translateX(-50%) translateY(-50%) translateZ(-3px); }
+    .logo-3d .text-layer.layer-7 { transform: translateX(-50%) translateY(-50%) translateZ(-3.5px); }
+    .logo-3d .text-layer.layer-8 { transform: translateX(-50%) translateY(-50%) translateZ(-4px); }
+    .logo-3d .text-layer.layer-9 { transform: translateX(-50%) translateY(-50%) translateZ(-4.5px); }
+    .logo-3d .text-layer.layer-10 { transform: translateX(-50%) translateY(-50%) translateZ(-5px); }
+    .logo-3d .text-layer.layer-11 { transform: translateX(-50%) translateY(-50%) translateZ(-5.5px); }
+    .logo-3d .text-layer.layer-12 { transform: translateX(-50%) translateY(-50%) translateZ(-6px); }
+    .logo-3d .text-layer.layer-13 { transform: translateX(-50%) translateY(-50%) translateZ(-6.5px); }
+    .logo-3d .text-layer.layer-14 { transform: translateX(-50%) translateY(-50%) translateZ(-7px); }
+    .logo-3d .text-layer.back { transform: translateX(-50%) translateY(-50%) translateZ(-7.5px); }
+    
+    /* Reducir efectos de texto para mejor legibilidad */
+    .logo-3d .text-layer.front {
+        text-shadow: 
+            0 0 2px var(--pink),
+            0 0 4px var(--pink),
+            -1px -1px 0 var(--pink),
+            1px -1px 0 var(--pink),
+            -1px 1px 0 var(--pink),
+            1px 1px 0 var(--pink);
+    }
 }
 
 /* ===== iPhone XR/11 (414x896) ===== */
